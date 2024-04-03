@@ -9,4 +9,6 @@ router.get('/performers/new', performersCtrl.new);
 // POST /performers (create functionality)
 router.post('/performers', performersCtrl.create);
 
+router.post('/movies/:id/performers', performersCtrl.addToCast);
+
 module.exports = router;
