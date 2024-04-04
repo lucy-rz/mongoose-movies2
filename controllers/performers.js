@@ -32,6 +32,7 @@ async function create(req, res) {
   // Fix by either reformatting to "MM-DD-YYYY" or by 
   // appending a "time" fragment like this... 
   req.body.born += 'T00:00';
+  //console.log(req)
   try {
     await Performer.create(req.body);
   } catch (err) {

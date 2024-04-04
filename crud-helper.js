@@ -40,3 +40,6 @@ Movie.updateMany({}, {cast: []})
 //     Movie,
 //     Performer,
 // }
+
+// Clear out reviews
+Movie.updateMany({}, {reviews: []}).then(console.log)
