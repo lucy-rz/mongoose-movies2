@@ -65,6 +65,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>User</th>
                     <th>Date</th>
                     <th>Review</th>
                     <th>Rating</th>
@@ -75,16 +76,11 @@
                     <% movie.reviews.forEach(function(r) { %>
                         <% total +=r.rating %>
                             <tr>
+                                <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
                                 <!-- .toLocaleDateString() provides a more friendly date format -->
-                                <td>
-                                    <%= r.createdAt.toLocaleDateString() %>
-                                </td>
-                                <td>
-                                    <%= r.content %>
-                                </td>
-                                <td>
-                                    <%= r.rating %>
-                                </td>
+                                <td><%= r.createdAt.toLocaleDateString() %></td>
+                                <td><%= r.content %></td>
+                                <td><%= r.rating %></td>
                             </tr>
                             <% }); %>
                                 <tr>
